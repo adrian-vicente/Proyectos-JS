@@ -1,0 +1,16 @@
+/** Estilos globales **/
+
+* {
+    font-family: 'Zalando Sans Expanded';
+
+}
+
+/** Estilos generales **/
+
+header > * {
+    text-align: center;
+}
+
+header > *:nth-child(2) {
+    text-decoration: underline;
+}

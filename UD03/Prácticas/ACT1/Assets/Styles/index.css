@@ -1,0 +1,17 @@
+* {
+    font-family: 'Zalando Sans';
+}
+
+/* Estilos generales */
+
+header > h1 {
+    text-align: center;
+    margin: 1rem;
+    text-decoration: underline;
+    padding: 1rem;
+}
+
+.ejercicio6 {
+    border: 2px solid black;
+    margin: 2rem;
+}

@@ -1,0 +1,12 @@
+* {
+    font-family: 'Zalando Sans Expanded';
+
+}
+
+header > * {
+    text-align: center;
+}
+
+header > *:nth-child(2) {
+    text-decoration: underline;
+}
