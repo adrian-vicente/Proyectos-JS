@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="base"></div>
+
+    <script>
+        let arr = ["Hola", "Soy", "Adrián Es el mejior", 30, 40, 50, 60, 70];
+        let div = document.getElementById("base");
+        let p = document.createElement("p");
+        div.appendChild(p);
+        let ultimoIndex = arr.findLastIndex((elemento) => {
+            return elemento.length > 7;
+        }); 
+        p.innerText = `Índice del último elemento qué supera la validación: ${ultimoIndex}, valor: ${arr[ultimoIndex]}`;
+
+    </script>
+
+
+</body>
+</html>

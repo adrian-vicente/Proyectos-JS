@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD04 - ARRAYS AVANZADOS - DWEC</title>
+</head>
+<body>
+
+    <div id="base"></div>
+    
+    <!-- Script del programa -->
+
+    <script>
+
+        // Prueba del copyWithIn
+
+        let arr_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let arr_2 = [11, 12, 13];
+        let arr_3 = arr_1.copyWithin(3, 0, arr_1.length);
+
+        // Mostrar información en el documento: 
+
+        let div = document.getElementById("base");
+        let p = document.createElement("p");
+        div.appendChild(p);
+        p.innerText = `Información del arr_3, usando el método copyWithIn: ${arr_3.toString()}`;
+
+        // Prueba del fill()
+
+        let p_fill = document.createElement("p");
+        div.appendChild(p_fill);
+        let fill = new Array(10);
+        fill.fill("Valor estático generado");
+        let cad = new String(" ");
+        for(let i in fill) {
+            cad = cad + `, número de elemento: ${i}, valor estático: ${fill[i]}`;
+
+        }; // for
+
+        p_fill.innerText = `Información del vector rellenado con valores estáticos: ${cad}`;
+
+        // Prueba del filter: 
+
+        let arr_numeros = [1, 2, 3, 4, 20, 30, 40, 50];
+        let arr_filter = arr_numeros.filter((numeroArray) => {
+            return numeroArray >= 30;
+        });
+
+        let cadena_arr_filter = new String(" ");
+        for(let i in arr_filter) cad = cad + `, posición del elemento: ${i}, valor: ${arr_filter[i]}`;
+        let p_arrFilter = document.createElement("p");
+        div.appendChild(p_arrFilter);
+        p_arrFilter.innerText = cad;
+
+
+    </script>
+
+</body>
+</html>

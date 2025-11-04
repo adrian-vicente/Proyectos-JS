@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD04 - ARRAYS AVANZADOS - DWEC</title>
+</head>
+<body>
+
+    <!-- Declaración de elementos: -->
+
+    <div id="base"></div>
+
+    <!-- Script -->
+
+    <script>
+        let div = document.getElementById("base");
+        let arr = [1, 2, 30, 40, 50, 60, 70];
+        let valorSuperior30 = arr.find((numeroArray) => {
+            return numeroArray > 30;
+        });
+
+        let p = document.createElement("p");
+        div.appendChild(p);
+        p.innerText = `Valor que devuelve el método find: ${valorSuperior30}`;
+
+    </script>
+
+</body>
+</html>

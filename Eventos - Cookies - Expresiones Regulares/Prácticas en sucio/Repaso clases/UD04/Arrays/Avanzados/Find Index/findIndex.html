@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Declaración de elementos -->
+
+    <div id="base"></div>
+
+    <!-- Script de prueba -->
+
+    <script>
+        let arr = ["Hola soy Adrián", 20, 30, 40, "Adrián"];
+        let div = document.getElementById("base");
+        let p = document.createElement("p");
+        div.appendChild(p);
+        let indexEncontrado = arr.findIndex((elemento) => {
+            return elemento.length > 5;
+        }); 
+        p.innerText = `Índice del valor encontrado en el array: ${indexEncontrado}, su valor es: ${arr[indexEncontrado]}`;
+    </script>
+
+</body>
+</html>

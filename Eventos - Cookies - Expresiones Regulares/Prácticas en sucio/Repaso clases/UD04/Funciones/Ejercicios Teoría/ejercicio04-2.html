@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <p id="prod" onclick="calcularPrecio(0, 120, 21)">Haz click aquí y ejecuta la función para calcular el precio.</p>
+
+    <script>
+        function calcularPrecio(nombreProducto = "Producto genérico", pvp = 100, porcentajeIva = 21) {
+            if(isNaN(pvp)) {
+                alert("Datos incorrectos");
+
+            } else if (isNaN(porcentajeIva)) {
+                alert("Datos incorrectos");
+
+            }; // if - else if
+
+            // Convertir el nombre de producto a cadena: 
+
+            let nProd_txt = String(nombreProducto);
+            let p = document.getElementById("prod");
+            p.innerText = `Nombre del producto: ${nProd_txt}, precio final: ${pvp + (pvp * (porcentajeIva / 100))}€`;
+
+        }; // calcularPrecio()
+    </script>
+
+</body>
+</html>

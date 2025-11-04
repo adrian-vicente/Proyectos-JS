@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWEC - UD04 - EJ01</title>
+</head>
+<body>
+    
+    <p id="sueldo"></p>
+
+    <script>
+        function calcularSueldo(sueldo, comision, retencion) {
+            let c_comision = sueldo * (comision / 100);
+            let r_retencion = sueldo * (retencion / 100);
+            return sueldo - c_comision - r_retencion;
+
+        }; // calcularSueldo     
+
+        let p = document.getElementById("sueldo");
+        p.innerText = `Sueldo final tras retenciones: ${calcularSueldo(2500, 20, 30)}€`;
+
+    </script>
+
+</body>
+</html>

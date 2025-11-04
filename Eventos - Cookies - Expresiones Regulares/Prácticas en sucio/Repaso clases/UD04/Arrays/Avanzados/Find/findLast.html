@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD04 - ARRAYS AVANZADOS - DWEC</title>
+</head>
+<body>
+    
+    <!-- Declaración de elementos -->
+
+    <div id="base"></div>
+
+    <!-- Declaración de script -->
+
+    <script>
+        let div = document.getElementById("base");
+        let p = document.createElement("p");
+        p.id = "parrafoLastFind";
+        let arrNumeros = [20, 30, 40, 50, 60, 192323, 2323232353, 24242];
+        let ultimoMayor1000 = arrNumeros.findLast((numeroArray) => {
+            return numeroArray > 1000
+        });
+
+        p.innerText = `Último elemento que es mayor de 1000, es: ${ultimoMayor1000}`;
+        div.appendChild(p);
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD5 - AVV - Prueba Eventos</title>
+
+    <!-- Fuentes de Google .-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Estilos: -->
+
+    <style>
+        * {
+            font-family: 'Roboto';
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- UD5 | PRUEBAS DE EVENTOS -->
+
+    <!-- Eventos de ratón: -->
+
+        <!-- 1. Evento onclick: -->
+
+        <p>Prueba del evento: Click</p>
+        <p onclick="cambiarColor(this)">Esto es una prueba de texto. Si haces click sobre el cambia de color</p>
+
+        <!-- 2. Evento double click: -->
+
+        <p>Prueba del evento: Double Click</p>
+        <p ondblclick="cambiarColor(this)">Esto es un texto donde haces doble click y cambia de color.</p>
+        
+        <!-- 3. Evento onmousedown, se pulsa el botón del ratón: -->
+
+        <p>Prueba del evento: Mouse Down</p>
+        <p onmousedown="MouseDown(this)">Esto es un párrafo que estará en negrita y cambiará de color cuándo se pulsa el botón del ratón</p>
+
+        <!-- 4. Evento onmouseout, cuando se quita el puntero del ratón de un elemento -->
+
+        <p>Prueba del evento: On Mouse Out</p>
+        <p onmouseout="mouseOut(this)">Esto es un parrafo que cambiará algunas propiedades cuando el ratón no esté encima de el</p>
+
+        <!-- 5. Evento onmouseover, cuando el puntero del ratón está sobre un elemento -->
+
+        <p>Prueba del evento: On Mouse Over</p>
+        <p onmouseover="mouseOver(this)">Esto es un parrafo que cambiará algunas propiedades cuando el puntero del ratón esté sobre el.</p>
+
+        <!-- 6. Evento onmouse up, cuando el puntero del ratón es soltado tras previamente haberlo tenido pulsado -->
+
+        <p>Prueba del evento: On Mouse Up</p>
+        <p onmouseup="mouseUp(this)">Esto es una prueba de un párrafo que cambiará algunas propiedades cuando se suelte el botón del ratón</p>
+
+        <!-- 7. Evento onmousemove, cuando el puntero del ratón se encuentra sobre un elemento -->
+
+        <p>Prueba del evento: On Mouse Move </p>
+        <p onmousemove="mouseMove(this)" onmouseout="mouseOut(this)">Esto es una prueba de un párrafo que cambiará algunas propiedades cuando el ratón esté encima suya siempre, se repetirá</p>
+        <p id="coordsX"></p>
+
+    <!-- Script: -->
+
+    <script src="./index.js" type="text/javascript"></script>
+
+</body>
+</html>

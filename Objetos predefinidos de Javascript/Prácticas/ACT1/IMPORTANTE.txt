@@ -1,0 +1,6 @@
+Algunos de los ejercicios JS necesitan de un index.html como el ejercicio del reloj, para que puedas comprobar que funcionan te he mandando comprimida todo la carpeta del workspace. 
+
+También decirte que abajo del body para poder ver el resultado de cada ejercicio habrá que poner el nombre de cada fichero js. Lo tengo quitado para que no se carguen todos de golpe. 
+
+- Adrián Vicente Vera
+- CFGS 2º DAW Semipresencial

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Párrafos para mostrar la información-->
+
+    <p id="decodeURI"></p>
+    <p id="decodeURIComponent"></p>
+    <p id="encodeURI"></p>
+    <p id="encodeURIComponent"></p>
+    <p id="escape"></p>
+    <p id="isFinite"></p>
+    <p id="isNaN"></p>
+    <p id="number"></p>
+    <p id="string"></p>
+    <p id="parseFloat"></p>
+    <p id="parseInt"></p>
+
+    <script>
+        
+        // Declaración de variables:
+
+        let p = document.getElementById("decodeURI");
+        let p_2 = document.getElementById("decodeURIComponent");
+
+        // Prueba de método decodeURI: 
+
+        p.innerText = `Información de la URL decodificada: ${window.decodeURI(document.URL)}`;
+        p_2.innerText = `Información de la URL decodificada correctamente: ${window.decodeURIComponent(document.URL)}`;
+
+        // Prueba del método encodeURI
+
+        let p_3 = document.getElementById("encodeURI");
+        p_3.innerText = `Información de la URL codificada: ${window.encodeURI(window.document.URL)}`;
+        
+        // Prueba del método encodeComponentURI: 
+
+        let p_4 = document.getElementById("encodeURIComponent");
+        p_4.innerText = `Información de la URL con carácteres especificados correctamente: ${window.encodeURIComponent(window.document.URL)}`;
+
+        // Prueba del método escape: 
+
+        let p_5 = document.getElementById("escape");
+        p_5.innerText = `Codificación de cadena con excepciones: ${window.escape(window.document.URL)}`;
+
+        // Prueba del isFInite()
+
+        let p6 = document.getElementById("isFinite");
+        if(isFinite(-3.14)) {
+            p6.innerText = `El número: -3.14 es un número infinito negativo`;
+
+        } else p6.innerText = `El número -3.14 no es un número inifito negativo`;
+
+        // Prueba del isNan()
+
+        let p7 = document.getElementById("isNaN");
+        if(isNaN("hola")) {
+            p7.innerText = `La cadena hola, no es un valor númerico...`;
+
+        } else p7.innerText = `La cadena hola, sí que es un valor númerico`;
+
+        // Prueba del método number: 
+
+        let p8 = document.getElementById("number");
+        let cadenaNumero = new String("30");
+        p8.innerText = `Valor de la cadena: ${cadenaNumero}, convertida a valor númerico: ${Number(cadenaNumero)}, tipo de dato de la cadena: ${typeof(Number(cadenaNumero))}`;
+
+        // Prueba del método String: 
+
+        let p9 = document.getElementById("string");
+        let n = 30;
+        p9.innerText = `Tipo de dato de la variable: ${n}, es ${typeof(n)}, tipo de dato tras la conversión: ${typeof(String(n))}`;
+        let n_nuevo_1 = parseInt(n);
+        let n_nuevo_2 = parseFloat(n);
+
+    </script>
+
+</body>
+</html>
