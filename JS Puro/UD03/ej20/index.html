@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT20</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        let contadorRojas = 0, contadorNegras = 0;
+
+        // Proceso para sacar las bolas: 
+        let bolas = ["rojo", "negro"];
+        let numExtracciones = 15;
+        for(let i = 0; i < numExtracciones; i++) {
+            let extraccion = Math.floor(Math.random() * bolas.length);
+            if(bolas[extraccion] === "rojo") contadorRojas++;
+            else contadorNegras++;
+
+        }; // for   
+
+        alert(`Porcentaje de bolas rojas: ${((contadorRojas / numExtracciones) * 100).toFixed(2)}, porcentaje de bolas negras: ${((contadorNegras / numExtracciones) * 100).toFixed(2)}`);
+
+    </script>
+
+</body>
+</html>

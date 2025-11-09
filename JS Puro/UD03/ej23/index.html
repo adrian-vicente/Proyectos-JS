@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT23</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        let v1 = Number(prompt("Introduce un número por teclado: "));
+        let v2 = Number(prompt("Introduce el segundo valor: "));
+        let resultado = 0;
+        if(v1 === 0 || v2 === 0) {
+            alert(`No se puede hacer la división debido a que uno de los números es cero...`);
+
+        } else {
+            if(v1 > v2) {
+                resultado = v1 / v2;
+
+            } else resultado = v2 / v1;
+        }
+
+        alert(`Resultado de la división: ${resultado}`);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT19</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        let letra = "Z";
+        let codeZ = letra.charCodeAt(0), codeA = 65;
+        let max   = 0, min = 0;
+            if(parseInt(codeZ) > parseInt(codeA)) {
+                max = codeZ, min = codeA;
+
+            } else {
+                max = codeA, min = codeZ;
+            }
+
+        alert(`Letra generada de manera aleatoria: ${String.fromCharCode(Math.floor(Math.random() * (max - min + 1) + min))}`);
+    </script>
+
+</body>
+</html>

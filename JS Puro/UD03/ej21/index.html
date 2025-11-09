@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - EJ21</title>
+</head>
+<body>
+
+    <!-- Script -->
+    <script>
+        let vNumeros = [];
+        let n = null;
+        for(let i = 0; i < 5; i++) {
+            n = Number(prompt("Introduce un valor: "));
+            if(!(n < 0)) {
+                vNumeros.push(n);
+            };
+        };
+
+        alert(`Valor máximo de: ${vNumeros.toString()}, es: ${Math.max(...vNumeros)}`);
+
+    </script>
+    
+</body>
+</html>

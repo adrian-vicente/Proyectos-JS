@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT22</title>
+</head>
+<body>
+
+    <!-- Script -->
+    <script>
+        let vNumeros = [];
+        let numeroUsuario = 0;
+        for(let i = 0; i < 5; i++) {
+            numeroUsuario = Number(prompt("Introduce un valor: "));
+            if(numeroUsuario % 2 !== 1 && numeroUsuario > 0) {
+                vNumeros.push(numeroUsuario);
+            };
+        };
+
+        alert(`Valor máximo de los valores introducidos: ${vNumeros.toString()}, son: ${Math.max(...vNumeros)}`);
+
+    </script>
+
+</body>
+</html>
