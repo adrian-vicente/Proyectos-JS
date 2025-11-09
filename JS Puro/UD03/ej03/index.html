@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT3</title>
+</head>
+<body>
+
+    <!-- Script -->
+    <script>
+        let f = new Date();
+        f.setFullYear(f.getFullYear() + 10);
+        f.setMonth(f.getMonth() + 4);
+        f.setDate(f.getDate() + 5);
+        let p = document.createElement("p");
+        p.textContent = `Fecha con los valores modificados: ${f.toLocaleString("es-ES")}`;
+        document.body.appendChild(p);
+    </script>
+
+</body>
+</html>

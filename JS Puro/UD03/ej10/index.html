@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD3 - EJ10</title>
+</head>
+<body>
+
+    <!-- Script -->
+    <script>
+         class Trabajador {
+            constructor(nombre, apellidos, sueldo, fechAlta) {
+                this.nombre = nombre;
+                this.apellidos = apellidos;
+                this.sueldo = sueldo;
+                if(typeof(fechAlta) === "object") {
+                    this.fechaAlta = fechAlta;
+                }
+            }
+         };
+         let arr_trabajadores = [];
+         for(let i = 0; i <= 4; i++) {
+            let n = prompt("Introduce el nombre: ");
+            let a = prompt("Introduce los apellidos: ");
+            let s = parseFloat(prompt("Introduce el sueldo: "));
+            let f = new Date(prompt("Introduce la fecha de alta en la empresa (AAAA-MM-DD):"));
+            let nuevoTrabajador = new Trabajador(n, a, s, f);
+            arr_trabajadores.push(nuevoTrabajador);
+
+         }
+
+         let retencion = null, cantidadRetencion = 0;
+         for(let trabajador of arr_trabajadores) {
+            if(parseInt(trabajador.fechaAlta.getFullYear()) < 1980) {
+                retencion = 0.20;
+                cantidadRetencion = trabajador.sueldo * retencion;
+                document.writeln("Trabajador: " + trabajador.nombre + ", se le quita de reteción: " + cantidadRetencion + "€" + "<br>");
+            } else if (parseInt(trabajador.fechaAlta.getFullYear()) >= 1980 && parseInt(trabajador.fechaAlta.getFullYear()) <= 2000) {
+                retencion = 0.15;
+                cantidadRetencion = trabajador.sueldo * retencion;
+                document.writeln("Trabajador: " + trabajador.nombre + ", se le quita de reteción: " + cantidadRetencion + "€" + "<br>");
+            } else if (parseInt(trabajador.fechaAlta.getFullYear()) >= 2000) {
+                retencion = 0.05;
+                cantidadRetencion = trabajador.sueldo * retencion;
+                document.writeln("Trabajador: " + trabajador.nombre + ", se le quita de reteción: " + cantidadRetencion + "€" + "<br>");
+            }
+         }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT3</title>
+</head>
+<body>
+    
+    <!-- Script -->
+
+    <script>
+        let vehiculo = {
+            "marca": "",
+            "modelo": "",
+            "fecha": "",
+            "cilindrada": 0,
+            "motor": "1.",
+            "potencia": "",
+        }
+
+        vehiculo.marca = "Seat";
+        vehiculo.modelo = "Leon MK2 1P1",
+        vehiculo.fecha = "2012",
+        vehiculo.cilindrada = 1200,
+        vehiculo.motor = "1.2TSI",
+        vehiculo.potencia = 105;
+
+        let p = document.createElement("p");
+        let cad = new String(" ");
+        for(let propiedad in vehiculo) cad = cad + " " + vehiculo[propiedad];
+        p.textContent = cad;
+        document.body.appendChild(p);
+
+    </script>
+
+</body>
+</html>

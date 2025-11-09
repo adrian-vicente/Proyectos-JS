@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT2</title>
+</head>
+<body>
+
+    <h3>UD02 - ACT2</h3>
+
+    <!-- Script -->
+
+    <script>
+        let diasSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+        let cad = new String(" ");
+        for(let dia of diasSemana) cad = cad + " " + dia;
+        let p = document.createElement("p");
+        p.textContent = cad;
+        document.body.appendChild(p);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT7</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        let fInicial = new Date(prompt("Introduce fecha inicio de nómina (AAAA-MM-DD): "));
+        let fFinal   = new Date(prompt("Introduce la fecha final de nómina (AAAA-MM-DD): "));
+        let precioDia = 55, retencion = 0.12;
+
+        let diferencia = parseInt(fFinal.getDate()) - parseInt(fInicial.getDate());
+        let cantidadPago = diferencia * precioDia;
+        let cantidadRetencion = cantidadPago * retencion;
+        let p = document.createElement("p");
+        p.textContent = `Cantidad a pagar al empleado: ${cantidadPago}€, retención: ${cantidadRetencion}€`;
+        document.body.appendChild(p);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT5</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        let v1 = "Esto es una variable de tipo texto.";
+        let tieneValor = v1 !== "" ? true : false;
+        let p = document.createElement("p");
+        if(tieneValor) p.textContent = `La variable tiene valor asignado, que es: ${v1}`;
+        else p.textContent = `La variable no tiene valor asignado.`;
+        document.body.appendChild(p);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT28</title>
+</head>
+<body>
+    
+    <!-- Script -->
+
+    <script>
+        class Alumno {
+            constructor(edad, estatura) {
+                this.edad = edad;
+                this.estatura = estatura;
+            }
+        }
+
+        let listaAlumnos = [];
+        for(let i = 0; i < 5; i++) {
+            let edad = parseInt(prompt("Introduce la edad: "));
+            let estatura = parseFloat(prompt("Introduce la estatura: "));
+            let a = new Alumno(edad, estatura);
+            listaAlumnos.push(a);
+        }
+
+        let edadMedia = 0, estaturaMedia = 0;
+        let aluMayorEdad = 0, aluEstaturaMayor = 0;
+
+        let aEdad = 0, aEstatura = 0;
+
+        for(let i = 0; i < listaAlumnos.length; i++) {
+            aEdad = listaAlumnos[i].edad;
+            aEstatura = listaAlumnos[i].estatura;
+            if(listaAlumnos[i].edad > 18) aluMayorEdad += 1;
+            if(listaAlumnos[i].estatura > 1.75) aluEstaturaMayor += 1;
+        }
+
+        edadMedia = aEdad / listaAlumnos.length;
+        estaturaMedia = aEstatura / listaAlumnos.length;
+        let p = document.createElement("p");
+        p.textContent = `Edad media: ${edadMedia}, estatura media: ${estaturaMedia}, alumnos mayores de 18 años: ${aluMayorEdad}, alumnos con estatura mayor a 1.75: ${aluEstaturaMayor}`;
+        document.body.appendChild(p);
+    </script>
+
+</body>
+</html>

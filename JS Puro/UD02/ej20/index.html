@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT20</title>
+</head>
+<body>
+    
+    <!-- Script -->
+
+    <script>
+        let numeroUsuario = 0;
+        let media = 0;
+        let contadorNumeros = 0;
+        let acumulador = 0;
+        do {
+            numeroUsuario = Number(prompt("Introduce un valor: "));
+            contadorNumeros++;
+            acumulador += numeroUsuario;
+        } while(numeroUsuario >= 0);
+        media = acumulador / contadorNumeros;
+        document.writeln(`La media de los valores introducidos es: ${media.toFixed(2)}`);
+    </script>
+
+</body>
+</html>

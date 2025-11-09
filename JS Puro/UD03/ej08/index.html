@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT8</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        let alumno = {
+            "codigo": 1,
+            "nombre": "Luis",
+            "apellidos": "Mas Ros",
+            "fechaNacimiento": new Date("1990-10-5"),
+            "calificacion": 7.5
+        };
+        let edadAlumno = new Date().getFullYear() - alumno.fechaNacimiento.getFullYear();
+        let propiedadesAlumno = ["codigo", "nombre", "apellidos", "fechaNacimiento", "calificacion", "edad"];
+        let table = document.createElement("table");
+            for(let i = 0; i < 6; i++) {
+                let tr = document.createElement("tr");
+                let th = document.createElement("th");
+                    th.textContent = `${propiedadesAlumno[i]}`;
+                let td = document.createElement("td");
+                    td.id = propiedadesAlumno[i];
+
+                tr.style.border = "2px solid black";
+                th.style.border = "2px solid red";
+                td.style.border = "2px solid blue";
+                table.append(tr, th, td);
+            };
+        
+        document.body.appendChild(table);
+            document.getElementById("codigo").textContent = alumno.codigo;
+            document.getElementById("nombre").textContent = alumno.nombre;
+            document.getElementById("apellidos").textContent = alumno.apellidos;
+            document.getElementById("fechaNacimiento").textContent = alumno.fechaNacimiento;
+            document.getElementById("calificacion").textContent = alumno.calificacion;
+            document.getElementById("edad").textContent = edadAlumno + " años.";   
+    </script>
+
+</body>
+</html>

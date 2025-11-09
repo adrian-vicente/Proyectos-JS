@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT25</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        let numero = parseInt(prompt("Introduce un valor: "));
+        let f = 1;
+        for(let i = numero; i >= 1; i--) {
+            f *= i;            
+        }; // for
+        let p = document.createElement("p");
+        p.textContent = `El factorial de: ${numero}, es: ${f}`;
+        document.body.appendChild(p);
+    </script>
+
+</body>
+</html>

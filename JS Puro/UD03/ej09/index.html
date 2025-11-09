@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT00</title>
+</head>
+<body>
+
+    <!-- Script -->
+    <script>
+        let fechaLimite = new Date();
+        let fechaEntrega = new Date(prompt("Introduce la fecha de entrega (AAAA-MM-DD): "));
+        if(fechaEntrega < fechaLimite) alert("Has entregado el trabajo a tiempo.");
+        else alert("No has entregado el trabajo a tiempo.");
+    </script>
+
+</body>
+</html>

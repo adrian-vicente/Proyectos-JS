@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT2</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        let f = new Date();
+            let d = f.getDay();
+            let m = f.getMonth();
+            let a = f.getFullYear();
+            let h = f.getHours();
+                let min = f.getMinutes();
+                let sec = f.getSeconds();
+            
+        let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        let diaSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+        let p = document.createElement("p");
+            p.textContent = `${diaSemana[d]}, ${f.getDate()} de ${meses[m]} del ${a} a las ${h}:${min}:${sec}.`;
+        document.body.appendChild(p);
+    </script>
+
+</body>
+</html>

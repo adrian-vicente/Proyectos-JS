@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT31</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        let cAprobados = 0, cSuspensos = 0;
+        let nota = 0;
+        for(let i = 0; i < 6; i++) {
+            nota = parseFloat(prompt("Introduce la nota: "));
+            if(nota >= 5) cAprobados++;
+            else cSuspensos++;
+        }
+
+        let p = document.createElement("p");
+        p.textContent = `Cantidad de aprobados: ${cAprobados}, cantidad de suspensos: ${cSuspensos}`;
+        document.body.appendChild(p);
+    </script>
+
+</body>
+</html>

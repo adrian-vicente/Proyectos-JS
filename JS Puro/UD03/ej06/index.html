@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT6</title>
+</head>
+<body>
+
+    <div id="reloj"></div>
+    <button id="btnPararReloj">Parrar el reloj</button>
+
+    <!-- Script -->
+    <script>
+        let div = document.getElementById("reloj");
+        let btnPararReloj = document.getElementById("btnPararReloj");
+
+        // Proceso de creación del reloj: 
+
+        let p = document.createElement("p");
+        let r = null;
+        let idReloj = setInterval(() => {
+            r = new Date().toLocaleTimeString("es-ES");
+            p.textContent = `Información del reloj: ${r}`;
+            div.appendChild(p);
+        }, 1000);
+        
+        // Función parar parar el proceso: 
+
+        btnPararReloj.addEventListener("click", pararReloj);
+        function pararReloj() {
+            clearInterval(idReloj);
+            alert("El reloj ha sido parado.");
+        }; // pararReloj()
+
+    </script>
+    
+</body>
+</html>

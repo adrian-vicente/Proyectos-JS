@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT29</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+      let nUsu = parseInt(prompt("Introduce un valor: "));
+      if(nUsu >= 0 && nUsu <= 10) {
+        document.write(`Tabla de multiplicar del: ${nUsu}`);
+        document.writeln("<br>");
+        document.writeln("**************");
+        document.writeln("<br>");
+        for(let i = 0; i <= nUsu; i++) {
+            document.writeln(`${nUsu} * ${i} = ${nUsu * i}`);
+            document.writeln("<br>");
+        }
+      }
+    </script>
+
+</body>
+</html>

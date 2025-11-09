@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT30</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        class factura {
+            constructor(codigoArticulo, cantidadVendida, precioLitro) {
+                this.codigo = codigoArticulo;
+                this.cantidadVendida = cantidadVendida;
+                this.precioLitro = precioLitro;
+            }
+        }
+
+        let fTotal = 0, cantidadLitros = 0, facturasEmitidas = 0;
+        let listaFacturas = [];
+        for(let i = 0; i < 5; i++) {
+            let f = new factura;
+            let c = prompt("Introduce el código del articulo: ");
+            let cV = parseInt(prompt("Introduce la cantidad vendida: "));
+            let pL = parseFloat(prompt("Introduce el preciod el litro: "));
+            listaFacturas.push(f);
+        }; // for
+
+        let factura1 = listaFacturas[0];
+        cantidadLitros = factura1.cantidadVendida;
+        listaFacturas.forEach(factura => {
+            fTotal += factura.cantidadVendida * factura.precioLitro;
+            if(factura.cantidadVendida * factura.precioLitro > 600) facturasEmitidas +1;
+        });
+
+        let p = document.createElement("p");
+        p.textContent = `Facturas emitidas de más de 600€: ${facturasEmitidas}, facturación total: ${fTotal}€, cantidad vendida en litros: ${cantidadLitros}`;
+        document.body.appendChild(p);
+
+    </script>
+
+</body>
+</html>

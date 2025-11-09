@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT39</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        let hora = prompt("Introduce una hora (HH:MM): ");
+        let indexOfSeparador = hora.indexOf(":");
+        let h = hora.substring(0, indexOfSeparador).trim();
+        h = parseInt(h);
+        let p = document.createElement("p");
+        if(h >= 6 && h <= 12) { 
+            p.textContent = `BUENOS DÍA`;
+        } else if (h>= 13 && h<=20) {
+            p.textContent = `Buenas tardes`;
+        } else {
+            p.textContent = `Buenas noches`;
+        }
+        document.body.appendChild(p);
+    </script>
+
+</body>
+</html>

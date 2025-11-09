@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT6</title>
+</head>
+<body>
+    
+    <!-- Script -->
+
+    <script>
+        const EURO = 166.386;
+        
+        // Ejercicio 7: 
+
+        let peseta = 15000;
+        let sueldoEuros = pesetaEuro(peseta);
+        let p = document.createElement("p");
+        p.textContent = `Sueldo en pesetas: ${peseta}PTAS, sueldo en euros: ${sueldoEuros}€`;
+        document.body.appendChild(p);
+        function pesetaEuro(peseta) {
+            return peseta * EURO;
+        };
+        
+    </script>
+
+</body>
+</html>

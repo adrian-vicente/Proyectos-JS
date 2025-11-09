@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT26</title>
+</head>
+<body>
+    
+    <!-- Script -->
+
+    <script>
+        let cPositivos = 0, cNegativos = 0, cCeros = 0;
+        let aPositivos = 0, aNegativos = 0;
+        let mPositivos = 0, mNegativos = 0;
+        let nUsu = 0;
+        for(let i = 0; i <= 10; i++) {
+            nUsu = Number(prompt("Introduce un valor: "));
+            if(nUsu >= 0) {
+                cPositivos++;
+                aPositivos += nUsu;
+
+            } else if (nUsu < 0) {
+                cNegativos++;
+                aNegativos += nUsu;
+
+            } else if (nUsu === 0) {
+                cCeros += 1;
+
+            }
+
+        }
+
+        mPositivos = (aPositivos / cPositivos).toFixed(2);
+        mNegativos = (aNegativos / cNegativos).toFixed(2);
+        let p = document.createElement("p");
+        p.textContent = `Media de los números positivos: ${mPositivos}, media de los números negativos: ${mNegativos}, número de ceros: ${cCeros}`;
+        document.body.appendChild(p);
+    </script>
+
+</body>
+</html>

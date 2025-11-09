@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT27</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    
+    <script>
+        let mayores1000 = 0, sumaSueldos = 0, sueldo = 0;
+        for(let i = 0; i <= 10; i++) {
+            sueldo = parseFloat(prompt("Introduce un sueldo: "));
+            sumaSueldos += sueldo;
+            if(sueldo >= 1000) mayores1000++;
+
+        }; // for
+
+        let p = document.createElement("p");
+        p.textContent = `Suma de los sueldos: ${sumaSueldos}€, mayores de 1000€: ${mayores1000} sueldos`;
+        document.body.appendChild(p);
+
+    </script>
+
+</body>
+</html>

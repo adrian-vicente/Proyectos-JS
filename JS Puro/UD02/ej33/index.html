@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT33</title>
+</head>
+<body>
+
+    <!-- Script -->
+    <script>
+        let calificacion = 0, cSuspensos = 0;
+        for(let i = 0; i < 5; i++) {
+            calificacion = Number(prompt("Introduce una calificación: "));
+            if(calificacion <= 0) cSuspensos++;
+        }
+        let p = document.createElement("p");
+        p.textContent = `Se han registrado: ${cSuspensos} suspensos.`;
+    </script>
+
+</body>
+</html>

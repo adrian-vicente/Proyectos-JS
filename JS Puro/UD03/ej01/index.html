@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT1</title>
+</head>
+<body>
+
+    <!-- Script -->
+    <script>
+        let f = new Date();
+            let d = f.getDay() + 1;
+            let m = f.getMonth();
+            let a = f.getFullYear();
+
+        if(d.toString().length === 1) {
+            d = "0" + d.toString();
+        }
+
+        let f_txt = `${d}/${m}/${a}`;
+        let p = document.createElement("p");
+        p.textContent = `Fecha con el formato indicado: ${f_txt}`;
+        document.body.appendChild(p);
+    </script>
+
+</body>
+</html>

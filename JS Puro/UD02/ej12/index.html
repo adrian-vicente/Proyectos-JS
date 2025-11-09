@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT12</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    
+    <script>
+        let numeroTabla = 0;
+        let num = 10;
+        do {
+            document.writeln(`Tabla del: ${numeroTabla}` + "<br>");
+            document.writeln(`**************************` + "<br>");
+            for(let i = 0; i <= num; i++) document.writeln(`${i} x ${numeroTabla} = ${i * numeroTabla}` + "<br>");
+            numeroTabla++;
+        } while(numeroTabla <= 10);
+    </script> 
+
+</body>
+</html>

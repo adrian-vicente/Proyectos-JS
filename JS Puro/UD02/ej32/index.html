@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD02 - ACT32</title>
+</head>
+<body>
+    
+    <!-- Script --> 
+    <script>
+        let nUsu = 0, cNegativos = 0;
+        for(let i = 0; i < 10; i++){
+            nUsu = Number(prompt("Introduce un valor: "));
+            if(nUsu < 0) cNegativos++;
+        }
+        let p = document.createElement("p");
+        p.textContent = `Se han introducido: ${cNegativos} números negativos.`;
+        document.body.appendChild(p);
+    </script>
+
+</body>
+</html>

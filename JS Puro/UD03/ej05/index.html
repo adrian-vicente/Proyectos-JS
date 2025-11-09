@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT5</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        let horasTrabajadas = Number(prompt("Introduce las horas trabajadas: "));
+        let fechaTrabajo = new Date(prompt("Introduce una fecha (AAAA-MM-DD): "));
+        let precioHoraEspecial = 20, precioHora = 15;
+        let cantidadHoras = 0;
+
+        // Calcular dinero horas trabajadas: 
+
+        if(fechaTrabajo.getDay() === 0 || fechaTrabajo.getDay() === 1) {
+            cantidadHoras = precioHoraEspecial * horasTrabajadas;
+
+        } else cantidadHoras = precioHora * horasTrabajadas;
+
+        // Mensajes de control: 
+
+        let p = document.createElement("p");
+        p.textContent = `Fecha introducida: ${fechaTrabajo.toString()}`;
+        document.body.appendChild(p);
+
+        // Mensajes de la actividad: 
+
+        let pCantidad = document.createElement("p");
+        pCantidad.textContent = `Cantidad de horas trabajadas por empleado: ${horasTrabajadas}, fecha en las qué la trabajó: ${fechaTrabajo.toLocaleString("es-ES")}, total de cantidad a remunerar: ${cantidadHoras}€`;
+        document.body.appendChild(pCantidad);50
+    </script>
+
+</body>
+</html>
