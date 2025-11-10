@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT37</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        let btn = document.createElement("button");
+        btn.textContent = `Abrir una nueva ventana emergente`;
+        document.body.appendChild(btn);
+        
+        let p = document.createElement("p");
+            p.id = "pVerificacion";
+            p.textContent = ``;
+        btn.addEventListener("click", () => {
+            let ventana = window.open("", "ventanaEmergente", "width=1500, height=300");
+                let usu = ventana.prompt("Introduce el nombre de usuario: ");
+                let psw = ventana.prompt("Introduce la contraseña: ");
+                if(usu.toLowerCase() === "adrian" && psw.toLowerCase() === "vicente") {
+                    ventana.close();
+                    p.textContent = `Acceso permitido`;
+
+                } else {
+                    ventana.close();
+                    p.textContent = `No se ha podido completar el acceso`;
+                }
+           
+        document.body.appendChild(p);
+
+        });
+    </script>
+
+</body>
+</html>

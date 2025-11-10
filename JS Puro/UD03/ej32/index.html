@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - AC32</title>
+</head>
+<body>
+
+    <!-- Script -->
+    <script>
+        let v = "Centro de Estudios IES El Grao";
+        let arr_v = v.split(" ");
+        let p = document.createElement("p");
+        let cad = new String(" ");
+        for(let i = arr_v.length - 1; i >= 0; i--) cad += " " + arr_v[i];
+        p.textContent = `Cadena inversa: ${cad}`;
+        document.body.appendChild(p);
+    </script>
+
+</body>
+</html>

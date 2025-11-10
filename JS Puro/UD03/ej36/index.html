@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT36</title>
+</head>
+<body>
+
+    <!-- Script -->
+    <script>
+        let frmset = document.createElement("frameset");
+        frmset.rows = "50%, 50%";
+            let frm1 = document.createElement("frame");
+            let frm2 = document.createElement("frame");
+                frm1.name = "Frame 1", frm2.name = "Frame 2";
+                frm1.src = "https://youtube.com", frm2.src = "https://chatgpt.com";
+            frmset.append(frm1, frm2);
+            document.body.appendChild(frmset);
+    </script>
+
+</body>
+</html>

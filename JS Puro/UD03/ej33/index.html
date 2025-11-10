@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UD03 - ACT33</title>
+</head>
+<body>
+    
+    <!-- Script -->
+    <script>
+        let txt = prompt("Introduce un texto: ");
+        alert(`Resultado de cadena encriptada: ${encriptarMensaje(txt)}`);
+        alert(`Resultado de la cadena desencriptada: ${desencriptarMensaje(txt)}`);
+
+        function encriptarMensaje(txt) {
+            let nuevaCadena = new String("");
+            for(let i = 0; i < txt.trim().length; i++) {
+                let code = txt.charCodeAt(i) + 5;
+                nuevaCadena = nuevaCadena + String.fromCharCode(code);
+            }
+            return nuevaCadena;
+        };
+
+        function desencriptarMensaje(txt) {
+            let cadenaEncriptada = encriptarMensaje(txt);
+            let cadenaDesencriptada = new String("");
+            for(let i = 0; i < cadenaEncriptada.trim().length; i++) {
+                let code = cadenaEncriptada.charCodeAt(i) - 5;
+                cadenaDesencriptada = cadenaDesencriptada + String.fromCharCode(code);
+            }
+            return cadenaDesencriptada;
+        }
+
+    </script>
+
+</body>
+</html>
